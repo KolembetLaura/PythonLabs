@@ -91,23 +91,16 @@ print ("Среднее арифметическое = ", b)
 # In[4]:
 
 
-s=0
-
-for i in range(100,1000):
-
-    n=i
-
-    while (n>0):
-
-        s+=pow(n % 10,3)
-
-        n=n // 10
-
-    if (s==i):
-
-        print(i)
-
-    s=0
+for num in range(100,10000):
+  sum = 0
+  temp = num
+  n = len(str(num))
+  while temp > 0:
+          d = temp % 10
+          sum += d ** n
+          temp //= 10
+  if num == sum:
+      print(num)
 
 
 # In[5]:
